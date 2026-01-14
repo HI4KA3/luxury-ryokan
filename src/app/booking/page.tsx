@@ -84,11 +84,13 @@ function BookingContent() {
                                             <span className="text-xl font-heading">¥{room.price.toLocaleString()}</span>
                                             <span className="text-xs"> / night</span>
                                         </div>
-                                        <Button asChild>
-                                            <Link href={`/contact?subject=Reservation Request: ${room.name}&dates=${initialCheckIn}-${initialCheckOut}`}>
-                                                Select Room
-                                            </Link>
-                                        </Button>
+                                        <Link
+                                            href={`/contact?subject=Reservation Request: ${room.name}&dates=${initialCheckIn}-${initialCheckOut}`}
+                                            className="inline-flex items-center justify-center rounded-md border px-4 py-2 text-sm"
+                                        >
+                                            Select Room
+                                        </Link>
+
                                     </div>
                                 </div>
                             </div>
