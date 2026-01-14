@@ -24,9 +24,13 @@ export function Access() {
                             <span className="text-sm">Tohoku Expressway (90 min from Tokyo)</span>
                         </div>
                     </div>
-                    <Button variant="outline" asChild>
-                        <Link href="/access">View Full Access Details</Link>
-                    </Button>
+                    <Link
+                        href="/access"
+                        className="inline-flex items-center justify-center rounded-md border px-4 py-2 text-sm hover:bg-neutral-100"
+                    >
+                        View Full Access Details
+                    </Link>
+
                 </div>
                 <div className="w-full md:w-1/2 h-[400px] bg-neutral-200 relative flex items-center justify-center">
                     <Text className="text-neutral-500">Google Maps Placeholder</Text>

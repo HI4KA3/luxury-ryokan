@@ -32,9 +32,12 @@ export default function OffersPage() {
                                 <Text className="mb-6">{offer.description}</Text>
                                 <div className="mt-auto flex items-center justify-between">
                                     <span className="text-sm text-neutral-500">Valid until: {offer.validUntil}</span>
-                                    <Button asChild>
-                                        <Link href="/booking">Book This Offer</Link>
-                                    </Button>
+                                    <Link
+                                        href="/booking"
+                                        className="inline-flex items-center justify-center rounded-md border px-3 py-2 text-sm hover:bg-neutral-100"
+                                    >
+                                        Book This Offer
+                                    </Link>
                                 </div>
                             </div>
                         </div>

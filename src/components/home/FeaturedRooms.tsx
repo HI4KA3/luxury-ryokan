@@ -3,7 +3,7 @@ import Image from "next/image";
 import { Section } from "@/components/ui/section";
 import { Heading, Text } from "@/components/ui/typography";
 import { rooms } from "@/content/rooms";
-import { Button } from "@/components/ui/button";
+
 
 export function FeaturedRooms() {
     return (
@@ -13,9 +13,13 @@ export function FeaturedRooms() {
                     <span className="text-accent tracking-[0.2em] text-sm block mb-4">ACCOMMODATION</span>
                     <Heading level={2} className="text-background mb-0">Guest Rooms</Heading>
                 </div>
-                <Button variant="outline" className="border-accent text-accent hover:bg-accent hover:text-black hidden md:inline-flex" asChild>
-                    <Link href="/rooms">View All Rooms</Link>
-                </Button>
+                <Link
+                    href="/rooms"
+                    className="inline-flex items-center justify-center rounded-md border border-accent px-4 py-2 text-sm text-accent hover:bg-accent hover:text-black hidden md:inline-flex"
+                >
+                    View All Rooms
+                </Link>
+
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
@@ -42,9 +46,14 @@ export function FeaturedRooms() {
             </div>
 
             <div className="mt-8 text-center md:hidden">
-                <Button variant="outline" className="border-accent text-accent hover:bg-accent hover:text-black w-full" asChild>
-                    <Link href="/rooms">View All Rooms</Link>
-                </Button>
+                <Link
+                    href="/rooms"
+                    className="hidden md:inline-flex items-center justify-center rounded-md border border-accent px-4 py-2 text-sm text-accent hover:bg-accent hover:text-black"
+                >
+                    View All Rooms
+                </Link>
+
+
             </div>
         </Section>
     );

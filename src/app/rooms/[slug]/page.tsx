@@ -106,12 +106,19 @@ export default function RoomDetailPage({ params }: { params: { slug: string } })
                                 </div>
                             </div>
 
-                            <Button className="w-full mb-4" asChild>
-                                <Link href={`/booking?room=${room.slug}`}>Check Availability</Link>
-                            </Button>
-                            <Button variant="outline" className="w-full" asChild>
-                                <Link href="/contact">Inquiry</Link>
-                            </Button>
+                            <Link
+                                href={`/booking?room=${room.slug}`}
+                                className="mb-4 inline-flex w-full items-center justify-center rounded-md border px-4 py-2 text-sm hover:bg-neutral-100"
+                            >
+                                Check Availability
+                            </Link>
+
+                            <Link
+                                href="/contact"
+                                className="inline-flex w-full items-center justify-center rounded-md border px-4 py-2 text-sm hover:bg-neutral-100"
+                            >
+                                Inquiry
+                            </Link>
                         </div>
                     </div>
                 </div>

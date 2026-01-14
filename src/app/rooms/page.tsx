@@ -64,18 +64,25 @@ export default function RoomsPage() {
                                     <div>View: {room.features[1]}</div>
                                 </div>
                                 <div className="flex items-center gap-4">
-                                    <Button asChild>
-                                        <Link href={`/booking?room=${room.slug}`}>Book Now</Link>
-                                    </Button>
-                                    <Button variant="outline" asChild>
-                                        <Link href={`/rooms/${room.slug}`}>View Details</Link>
-                                    </Button>
+                                    <Link
+                                        href={`/booking?room=${room.slug}`}
+                                        className="inline-flex items-center justify-center rounded-md border px-4 py-2 text-sm hover:bg-neutral-100"
+                                    >
+                                        Book Now
+                                    </Link>
+
+                                    <Link
+                                        href={`/rooms/${room.slug}`}
+                                        className="inline-flex items-center justify-center rounded-md border px-4 py-2 text-sm hover:bg-neutral-100"
+                                    >
+                                        View Details
+                                    </Link>
                                 </div>
                             </div>
                         </div>
                     ))}
                 </div>
             </Section>
-        </main>
+        </main >
     );
 }
