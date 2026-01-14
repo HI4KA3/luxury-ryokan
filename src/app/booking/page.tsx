@@ -47,8 +47,8 @@ function BookingContent() {
                             <span className="font-medium">{initialGuests} People</span>
                         </div>
                         <div className="ml-auto">
-                            <Button variant="outline" size="sm" asChild>
-                                <Link href="/">Modify Search</Link>
+                            <Button variant="outline" size="sm">
+                                <Link href="/Modify Search">Select Room</Link>
                             </Button>
                         </div>
                     </div>
